@@ -1,6 +1,6 @@
 # Project Description:
-  1- students are able to create profiles and login/logout. </br>
-  2- students are able to search for and select available books they need to borrow from the library. </br>
+  1- Students are able to create profiles and login/logout. </br>
+  2- Students are able to search for and select available books they need to borrow from the library. </br>
   3- Admins and librarians can add/delete books information.
 
 # Demo:
