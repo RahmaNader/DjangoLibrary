@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body %}
+  <div id="form">
+        <form  method="POST">
+            {% csrf_token %}
+            <label for="username">User name</label>
+            <br>
+            <input type="text" id="username" class="input" name="username" placeholder="Your username..">
+            <br><br>
+            <label for="password">Password</label>
+            <br>
+            <input type="text" id="password" class="input" name="password" placeholder="**********">
+            <br><br>
+            <div class="buttons">
+                <button type="button">
+                    <a class="button">Login</a>
+                </button>
+                <button type="button">
+                    <a href="http://127.0.0.1:8000" class="button">Return to home page</a>
+                </button>
+
+            </div>
+        </form>
+    </div>
+
+{% endblock body %}

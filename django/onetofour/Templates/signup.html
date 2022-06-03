@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body %}
+<!--Register--> 
+<form method = "POST" action="register">
+		{% csrf_token %}
+		<label for="username" >Username</label>
+            <br>
+            <input type="text" id="username" class="input" name="username" placeholder="Your user name.." required>
+            <br><br>
+		<label for="firstname" >First Name</label>
+            <br>
+            <input type="text" id="firstname" class="input" name="firstname" placeholder="Your first name.." required>
+            <br><br>
+            <label for="lastname">Last name</label>
+            <br>
+            <input type="text" id="lastname" class="input" name="lastname" placeholder="Your last name..">
+            <br><br>
+			<label for="Email">Email</label>
+            <br>
+            <input type="text" id="Email" class="input" name="Email" placeholder="Your Email..">
+            <br><br>
+            <label for="password1">Password</label>
+            <br>
+            <input type="text" id="password1" class="input" name="password1" placeholder="**********">
+            <br><br>
+			<label for="password2">Confirm Password</label>
+            <br>
+            <input type="text" id="password2" class="input" name="password2" placeholder="**********">
+            <br><br>
+            <div class="buttons">
+        <button><a class="button">submit</a></button> 
+		<button type="button">
+            <a href="http://127.0.0.1:8000" class="button">Return to home page</a>
+        </button> 
+		<button type="button">
+            <a href="http://127.0.0.1:8000/login" class="button">Login</a>
+        </button> 
+            </div>
+		
+<div>
+{% if messages %}
+    {% for message in messages %}
+    	<h4 style="color: red; text-align:center;"> {{ message }} </h4>
+    {% endfor %}
+{% endif %}
+</div>
+</form>
+
+{% endblock body %}
